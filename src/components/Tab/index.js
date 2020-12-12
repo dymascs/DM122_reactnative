@@ -1,9 +1,10 @@
-import React from 'react';
+ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../Home';
 import Category from '../Category';
 import { colors } from '../../styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Help from '../Help';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,6 +22,10 @@ const BottomTab = () => {
 
                     if(route.name === 'category') {
                         iconName = 'list'
+                    }
+
+                    if(route.name === 'help') {
+                        iconName = 'question'
                     }
 
                     return <Icon 
@@ -41,6 +46,7 @@ const BottomTab = () => {
                 }
             }>
         <Tab.Screen name='home' component={Home}/>
+        <Tab.Screen name='help' component={Help}/>
         <Tab.Screen name='category' component={Category}/>
         </Tab.Navigator>
     )

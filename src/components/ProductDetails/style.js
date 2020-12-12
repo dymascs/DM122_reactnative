@@ -24,7 +24,7 @@ const style = StyleSheet.create({
     price: {
         fontSize: fonts.big,
         fontWeight: 'bold',
-        color: '#6959CD'
+        color: '#666'
     },
     buttonAdd: {
         width: width
