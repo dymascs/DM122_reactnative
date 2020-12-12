@@ -5,6 +5,7 @@ import Category from '../Category';
 import { colors } from '../../styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Help from '../Help';
+import Profile from '../Profile';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,6 +29,10 @@ const BottomTab = () => {
                         iconName = 'question'
                     }
 
+                    if(route.name === 'profile') {
+                        iconName = 'user'
+                    }
+
                     return <Icon 
                                 name={iconName}
                                 size={25}
@@ -46,8 +51,10 @@ const BottomTab = () => {
                 }
             }>
         <Tab.Screen name='home' component={Home}/>
-        <Tab.Screen name='help' component={Help}/>
         <Tab.Screen name='category' component={Category}/>
+        <Tab.Screen name='help' component={Help}/>
+        <Tab.Screen name='profile' component={Profile}/>
+        
         </Tab.Navigator>
     )
 }
