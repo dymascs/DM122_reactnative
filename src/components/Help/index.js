@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text} from 'react-native';
 import style from './style'
 
-const Category = () => {
+const Help = () => {
     return (
         <View>
-            <Text>Category</Text>
+            <Text>Help</Text>
         </View>
     )
 }
 
-export default Category;
+export default Help;
