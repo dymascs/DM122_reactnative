@@ -1,12 +1,13 @@
 import React from 'react';
-import { View, Text} from 'react-native';
-import style from './style'
+import {ScrollView} from 'react-native';
+import CategoryList from '../CategoryList';
+import style from './style';
 
-const Category = () => {
+const Category = ({navigation}) => {
     return (
-        <View>
-            <Text>Category</Text>
-        </View>
+            <ScrollView style={style.container}>
+                <CategoryList navigation={navigation}/>
+            </ScrollView>
     )
 }
 

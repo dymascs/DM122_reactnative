@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import BottomTab from '../components/Tab';
 import ProductDetails from '../components/ProductDetails';
 import { colors } from '../styles';
+import ProductList from '../components/ProductList';
 
 const Stack = createStackNavigator();
 
@@ -29,6 +30,19 @@ const HomeStack = () => {
                     }
                 }
             />
+            <Stack.Screen 
+                name='ProductList'
+                component={ProductList}
+                options={
+                    {
+                        title: 'ProductList',
+                        headerStyle: {
+                            backgroundColor: colors.base
+                        },
+                        headerTintColor: colors.white
+                    }
+                }
+            /> 
         </Stack.Navigator>
     )
 }
